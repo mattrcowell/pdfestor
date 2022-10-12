@@ -1,0 +1,6 @@
+"Severity","ThreadID","Date","Time","Application","Message"
+"INFO","http-nio-8888-exec-1","10/10/2022","13:51:28","lucee.runtime.CFMLFactoryImpl","Reset 2 Unused PageContexts"
+"INFO","http-nio-8888-exec-2","10/10/2022","13:51:31","lucee.runtime.CFMLFactoryImpl","Reset 1 Unused PageContexts"
+"INFO","http-nio-8888-exec-4","10/10/2022","13:53:05","lucee.runtime.CFMLFactoryImpl","Reset 1 Unused PageContexts"
+"INFO","http-nio-8888-exec-9","10/10/2022","13:54:11","lucee.runtime.CFMLFactoryImpl","Reset 1 Unused PageContexts"
+"INFO","http-nio-8888-exec-8","10/10/2022","13:57:03","lucee.runtime.CFMLFactoryImpl","Reset 1 Unused PageContexts"
