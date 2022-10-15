@@ -8,15 +8,22 @@
 
 <cfset arytags = REfindNoCase('(<(\w+)(\s?(\w+)="(\d)"\s?)?>)', content, 1, true, 'all') />
 
-<cfset pagecontent = mid(content, arytags[3].pos[1], arytags[4].pos[1]-arytags[3].pos[1]) />
-<cfset pagecontent2 = mid(content, arytags[4].pos[1], arytags[5].pos[1]-arytags[4].pos[1]) />
-
 <cfloop from="1" to="#arrayLen(arytags)#" index="idx" >
+    <cfoutput>
+        #idx#
+    </cfoutput>
+
     <cfif isNumeric(arytags[idx].match[-1]) AND idx LT arrayLen(arytags)>
         <cfset pg = mid(content, arytags[idx].pos[1], arytags[idx+1].pos[1]-arytags[idx].pos[1]) />
-        <cfoutput>
-            #pg#<br />
-        </cfoutput>
+ 
+        <cfif idx EQ 4>
+            <cffile action="write" file="#expandPath('./udf/pdfest')#" output="#pg#" />
+
+            <cfoutput>
+                #pg#
+            </cfoutput>
+        </cfif>
+
     </cfif>
 </cfloop>
 
